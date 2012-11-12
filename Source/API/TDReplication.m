@@ -232,7 +232,7 @@ static inline BOOL isLocalDBName(NSString* url) {
 // This is only for non-persistent replications. Persistent ones are started by
 // the TDReplicatorManager.
 - (void) start {
-    if (_started || self.persistent)
+    if (_started)
         return;
     _started = YES;
     _mainThread = [NSThread currentThread];
