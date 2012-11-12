@@ -73,7 +73,7 @@ NSString* const kTDReplicationChangeNotification = @"TouchReplicationChange";
 // Instantiate a persistent replication from an existing document in the _replicator db
 - (id) initWithDocument:(TDDocument *)document {
     self = [super initWithDocument: document];
-    if (self) {
+    if (self && document) {
         self.autosaves = YES;  // turn on autosave for all persistent replications
         
         NSString* urlStr = self.sourceURLStr;
